@@ -51,7 +51,14 @@ func direccionFormateada (direccion: Direccion) -> String {
    return todaLaDireccion
 }
 
-print(direccionFormateada(direccion: direccion1))
+func multipleAddress(data: [Direccion]) -> String {
+  var address = ""
 
-print(direccionFormateada(direccion: direccion2))
-print(direccionFormateada(direccion: direccion3))
+  for item in data {
+    if let piso = item.piso {
+      address = "(address)\nPiso: (piso), Depto: (item.apartamento)"
+    }
+  }
+
+  return address
+}
