@@ -1,0 +1,57 @@
+typealias Direccion = (ciudad: String, barrio: String, region: String, calle: [String:Any], pais: String, codigoPostal: Int, piso: Int?, apartamento: Int)
+
+let direccion1: Direccion = (
+   ciudad: "ibague",
+   barrio: "samaria",
+   region: "tolima",
+   calle: ["nombreDeCalle": "la mala",
+           "numero": 49,
+           "entreCalle1": "sur",
+           "entreCalle2": "A"
+   ],
+   pais: "colombia",
+   codigoPostal: 73001,
+   piso: 3,
+   apartamento:201
+)
+
+let direccion2: Direccion = (
+   ciudad: "Bogota",
+   barrio: "chia",
+   region: "cundinamarca",
+   calle: ["nombreDeCalle": "septima",
+           "numero": 151,
+           "entreCalle1": "doce",
+           "entreCalle2": "A"
+   ],
+   pais: "colombia",
+   codigoPostal: 24005,
+   piso: 5,
+   apartamento: 504
+)
+
+let direccion3: Direccion = (
+   ciudad: "Pasto",
+   barrio: "ciudad real",
+   region: "Nariño",
+   calle: ["nombreDeCalle": "Ramon Falcon",
+           "numero": 1200,
+           "entreCalle1": "Arieta",
+           "entreCalle2": "Lartigau"
+   ],
+   pais: "Colombia",
+   codigoPostal: 72009,
+   piso: 1,
+   apartamento: 102
+)
+
+
+func direccionFormateada (direccion: Direccion) -> String {
+   let todaLaDireccion = "\(direccion)"
+   return todaLaDireccion
+}
+
+print(direccionFormateada(direccion: direccion1))
+
+print(direccionFormateada(direccion: direccion2))
+print(direccionFormateada(direccion: direccion3))
